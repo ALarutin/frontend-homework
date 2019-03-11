@@ -1,5 +1,7 @@
 'use strict';
 
+let plainObject = {};
+
 const objectSplitting = (path, obj) => {
     Object.keys(obj).forEach(key => {
         const newPath = `${path}${key}`;
@@ -12,10 +14,9 @@ const objectSplitting = (path, obj) => {
     });
 };
 
+
 const plainify = (object) => {
-    const plainObject = {};
-
+    plainObject = {};
     objectSplitting('', object);
-
     return plainObject;
 };
